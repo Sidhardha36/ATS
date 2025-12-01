@@ -38,9 +38,9 @@ Provides **User Registration**, **Login**, **Session Management**, and a simple 
 ```bash
 git clone https://github.com/Sidhardha36/ATS.git
 cd ATS
+
 2️⃣ Configure Database (MySQL)
 Create database:
-
 CREATE DATABASE ats_db;
 USE ats_db;
 Create users table:
@@ -57,53 +57,44 @@ Insert test user:
 
 INSERT INTO users (name, email, password)
 VALUES ('Test User', 'test@gmail.com', '12345');
+
 3️⃣ Update Database Connection
 Open:
-
 src/main/java/com/ats/util/DBConnection.java
+
 Update your MySQL credentials:
-
-
 private static final String URL = "jdbc:mysql://localhost:3306/ats_db";
 private static final String USER = "root";
 private static final String PASSWORD = "your_password";
+
 4️⃣ Build WAR File Using Maven
 bash
-
 mvn clean package
+
 WAR file will be created at:
-
-
 target/ATS.war
+
 5️⃣ Deploy on Apache Tomcat
-
-
-
 target/ATS.war
+
 Paste into:
-
-
 tomcat/webapps/
+
 6️⃣ Start Tomcat
 Windows:
-
 catalina.bat run
-Linux / macOS:
 
+Linux / macOS:
 ./catalina.sh run
+
 7️⃣ Access the Application
 Open browser:
-
 👉 http://localhost:8080/ATS/
 
 You will see:
-
 1.HomePage
-
 2.Register Page
-
 3.Login Page
-
 4.Dashboard
 
 📂 Project Structure
@@ -136,5 +127,5 @@ ATS/
 └── target/
     └── ATS.war
     
-Author
+## Author
 Sidhardha Varma
